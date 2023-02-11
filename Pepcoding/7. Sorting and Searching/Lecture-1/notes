@@ -1,0 +1,19 @@
+Generics
+
+∆
+selection
+insertion
+merge
+quick 
+count
+
+Time 
+Space 
+Stable
+Inplace/Outplace
+
+
+//QUESTION RELATIONS TO SORTING 
+
+--> MERGE INPLACE SHIT LOGIC (think about this one in future for sure)
+--> MY FUCKING QUICKSORT DOESN'T WORK BITCH (it is working, but it is not O(nlogn) boss!!!!)

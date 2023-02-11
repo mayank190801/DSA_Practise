@@ -1,0 +1,36 @@
+public class perimeter {
+    public static void main(String[] args) {
+
+    }
+
+    public int islandPerimeter(int[][] grid) {
+        int n = grid.length;
+        int m = grid[0].length;
+
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < m; j++){
+                if(grid[i][j] == 1){
+                        return updateGrid(grid, i, j, n, m);
+                }
+            }
+        }
+
+        return 0;
+    }
+
+    public int updateGrid(int[][] grid, int i, int j, int n, int m){
+        int[][] dir = {{-1,0}, {1,0}, {0,-1}, {0,1}};
+        int ans = 0;
+        grid[i][j] = -1;
+
+        for(int[] cdir : dir){
+            int nx = cdir[0] + i;
+            int ny = cdir[1] + j;
+
+            if(nx < 0 || nx >= n || ny < 0 || ny >= m || grid[nx][ny] != 1) ans++;
+            ans += updateGrid(grid, nx, ny, n, m);
+        }
+
+        return ans;
+    }
+}

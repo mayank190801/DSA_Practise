@@ -1,0 +1,22 @@
+Binary Search and shit from here now onwards
+
+Type - 1 (we could see BS)
+Type - 2 (No idea where is BS)
+Type - 3 (Miscellaneous/ combinations)
+
+//Simple as that boi
+
+//WHY NOT TERNARY??????
+//Why is ternary worse than binary search?????
+
+//on bigger scale , below one is better 
+1log2n 
+2log3n //if affects a lot in the search factor
+
+TC of TS > TC of BS (important stuff)
+
+//new formula for writing for mid
+//for saving overflow
+// mid = ei - (ei-si)/2  
+
+-> very cool for sure boisf

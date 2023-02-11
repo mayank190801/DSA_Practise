@@ -1,0 +1,25 @@
+//We will solve all problems relating to this given certain topic for now
+//let's do this bois
+
+First
+// aab -> make cuts to make leftover string palindrome!! (all actual partitions bois)
+// (a,a,b), (aa,b) 
+
+Second
+// Minimum cuts required to make the given string palindrome
+// aab -> 1
+
+Third
+// abc , 2 (exactly k parts needs to be palindrome!! + can change one character in it)
+// return the min characters to change!!!
+
+Fourth
+// same as above!!
+// k = 3 (given)
+
+//let's level up our DP game bois
+
+
+
+
+

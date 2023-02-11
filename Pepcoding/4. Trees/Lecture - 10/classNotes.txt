@@ -1,0 +1,5 @@
+//A lot of question to do
+//HW 
+
+Try solving under given constraints boi
+-> K th smallest element (in O(1) space and O(k*logn) time)

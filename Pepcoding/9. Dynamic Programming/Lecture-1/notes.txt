@@ -1,0 +1,15 @@
+//Recursion (Revision)
+
+//VOID and RETURN
+
+//2 TYPES
+//Ya toh kam ko abhi kr lo, and baaki sab Recursion (void)
+//Ya fir recursion laake dega, and fir mein karunga (return)
+
+//DP mostly in return types bois (remember that)
+
+//OVERLAPPING SUBPROBLEM
+//OPTIMAL SUBSTRUCTURE
+
+//It should be path indepent(if you want to store the values)
+//WHEN YOU WANT TO CREATE ANSWERS (don't use dp!!!)

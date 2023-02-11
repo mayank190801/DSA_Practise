@@ -1,0 +1,12 @@
+DP most imp done
+
+coin change, subset
+lis
+buy and sell stock
+inc & exec
+cut type
+kadanes
+
+
+now string variations and stuff!! pretty cool for sure
+do them properly, think think think

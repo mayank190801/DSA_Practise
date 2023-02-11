@@ -1,0 +1,40 @@
+(Features of Graph)
+
+-> may be bidirectional
+-> may have cycle
+-> may not be connected 
+
+(Types of Graph)
+-> Directed 
+-> Undirected
+-> Weighted
+-> Unweighted
+
+-> Adjacency list & Adjacency Matrix (for both of them)
+-> Array of ArrayList (adjacency list) (pair, int)
+
+Questions
+-> What is the transpose of adjacency matrix in undirectional Graph
+Ans. Same graph bruh 
+-> Max edges in a graph (formula) (in terms of vertex)
+Ans. n(n-1)/2
+
+
+COMPLEXITIES Of Graph
+
+                |   Matrix            |  List
+add Edge        |    O(2)             |  O(2)
+add Vertex      |    O(V^2)           |  O(V^2) (if using array of arraylist)
+remove edge     |    O(2)             |  O(2 * (V-1)) == O(V) 
+remove vertex   |    O(2*V) == O(V)   |  O(V^2) == O((V-1)*(V-1))
+
+
+(Notes)
+-> Cycle is never possible in two vertices!!! (remember that)
+-> WE CAN NEVER COUNT THE NUMBER OF CYCLES IN THE GRAPH!!! (he said)
+
+
+
+
+
+
