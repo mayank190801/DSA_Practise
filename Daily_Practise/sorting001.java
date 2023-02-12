@@ -6,7 +6,8 @@ public class sorting001 {
         //time space stability place application  --- these are the stuff you should know
         int[] arr = { 2, 7, 10, 1, 4,  8, 5, 3};
 //        insertionSort(arr);
-        selectionSort(arr);
+//        selectionSort(arr);
+//            bubbleSort(arr);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -39,6 +40,21 @@ public class sorting001 {
         arr[i] = arr[j];
         arr[j] = temp;
     }
+
+    public static void bubbleSort(int[] arr){
+        for(int i = arr.length-1; i >= 0; i--){
+            int count = 0;
+            for(int j = 0; j < i; j++){
+                if(arr[j] > arr[j+1]){
+                    count++;
+                    swap(j, j+1, arr);
+                }
+            }
+            if(count == 0) break;
+        }
+    }
+
+
 
 
 }
