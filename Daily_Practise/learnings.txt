@@ -1,0 +1,3 @@
+-> a function to convert a number to any base! (how crazy is that)
+-> Holy fuck that actually existed dude!
+Integer.toString(number,base)
