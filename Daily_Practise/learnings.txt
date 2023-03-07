@@ -7,3 +7,8 @@ Arrays.sort(score, (a, b) -> {
      return a[k] - b[k];
 });
 
+PRETTY COOL FINDING - conceptual
+-> taking the list present inside hashmap and storing it somewhere else
+-> That was actually something I have seen for the first time as well
+-> Basically hashmap is storing the pointer only na, so you can pick it from there, and store it in list
+
