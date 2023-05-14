@@ -1,0 +1,5 @@
+-> prime sieve gives all prime numbers 
+-> efficient for 10^7 numbers
+-> Space - O(n) Time - O(nloglogn)
+
+-> You can find the prime numbers upto the square root of the number 
