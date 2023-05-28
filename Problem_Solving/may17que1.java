@@ -16,6 +16,7 @@ import java.math.*;
 // didn't read the question properly
 // Long int issues could arise as well
 //more changes -- more more 
+//daily more changes but no substantial work
 
 public class may17que1{
 
