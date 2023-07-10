@@ -37,7 +37,6 @@ public class k {
         for (int i = 0; i < n; i++) {
             map.put(list.get(i).a, i + 1);
         }
-        System.out.println(map);
 
         long ans = 0;
         int[] vis = new int[n];
