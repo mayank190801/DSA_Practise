@@ -45,7 +45,6 @@ public class o {
                         que.add(edge);
                     }
             }
-
         }
 
         return cnt;
