@@ -38,19 +38,18 @@ public class t {
     }
 
     // let's try recursive dfs solution or something
+    // solve it without using set and think on paper for more clear usage of data
+    // structures
     public static Node cloneGraphDFS(Node node) {
-        Set<Integer> set = new HashSet<>();
-        Map<Integer, Node> map = new 
-        return dfs(node, set);
+        HashMap<Integer, Node> map = new HashMap<>();
+        return dfs(node, map);
     }
 
-    public static Node dfs(Node curr, Set<Integer> set, HashMap<Integer, Node> map) {
+    public static Node dfs(Node curr, HashMap<Integer, Node> map) {
         Node ncurr = new Node(curr.val);
         map.putIfAbsent(ncurr.val, ncurr);
-        set.add(curr.val);
-
         for (Node edges : curr.neighbors) {
-            if (set.contains(edges.val)) {
+            if (map.containsKey(edges.val)) {
                 ncurr.neighbors.add(map.get(edges.val));
             } else {
                 Node get = dfs(edges, set, map);
