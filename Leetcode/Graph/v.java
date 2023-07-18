@@ -22,7 +22,6 @@ public class v {
             graph[v].add(u);
         }
 
-        // after this find the least amount of time
         int[] time = new int[n];
         int[] vis = new int[n];
         ArrayDeque<Integer> que = new ArrayDeque<>();
@@ -31,38 +30,40 @@ public class v {
         int timer = 0;
 
         while (!que.isEmpty()) {
-            int curr = que.poll();
+            int len = que.size();
             timer++;
-            for (int edge : graph[curr]) {
-                if (vis[edge] != 1) {
-                    time[edge] = timer;
-                    vis[edge] = 1;
-                    que.add(edge);
+            while (len-- > 0) {
+                int curr = que.poll();
+                for (int edge : graph[curr]) {
+                    if (vis[edge] != 1) {
+                        time[edge] = timer;
+                        vis[edge] = 1;
+                        que.add(edge);
+                    }
                 }
             }
         }
 
-        int max = 0;
+        // this part could be surely improved! (work on that next time)
+        long max = 0;
         for (int i = 1; i < n; i++) {
-            int repeat = patience[i];
-            int oneway = time[i];
+            long repeat = patience[i];
+            long oneway = time[i];
 
             // what should be the math? figure that stuff out now
-            if (oneway * 2 <= repeat) {
-                max = Math.max(max, oneway * 2);
+            if (oneway * 2L <= repeat) {
+                max = Math.max(max, oneway * 2L);
             } else {
-                int times = oneway * 2 / repeat;
-                if ((oneway * 2) % repeat == 0)
+                long times = oneway * 2 / repeat;
+                if ((oneway * 2L) % repeat == 0)
                     times--;
 
                 // now we have the times
-                int ans = oneway * 2 + times * repeat;
+                long ans = oneway * 2 + times * repeat;
                 max = Math.max(ans, max);
             }
-
         }
 
-        return max;
+        return (int) (max + 1L);
     }
-
 }
