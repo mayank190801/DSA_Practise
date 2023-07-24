@@ -49,8 +49,11 @@ public class x {
         }
 
         // since we know the answer will be in long
+        // so the important thing is you could basically used this piece in ther only
+        // this part should not be done alag se tbh, simple as that
+        // but the count would be typical no??
         long ans = 0;
-        long currSize = groups.size();
+        long currSize = total;
         for (int i = 0; i < groups.size() - 1; i++) {
             long curr = groups.get(i);
 
