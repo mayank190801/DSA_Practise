@@ -10,6 +10,7 @@ public class aa {
     }
 
     // let's solve this bad boy for sure
+    // still some error, figure out why those are happening
     public List<String> findAllRecipes(String[] recipes, List<List<String>> ingredients, String[] supplies) {
         Map<String, Integer> map = new HashMap<>();
         Map<Integer, String> mapRev = new HashMap<>();
@@ -57,13 +58,9 @@ public class aa {
         while (!que.isEmpty()) {
             int curr = que.poll();
             for (int edge : graph[curr]) {
-                if (vis[edge] == 0) {
-                    que.add(edge);
-                    vis[edge] = 1;
-                }
-
                 indegree[edge]--;
                 if (indegree[edge] == 0) {
+                    que.add(edge);
                     ans.add(mapRev.get(edge));
                 }
             }
