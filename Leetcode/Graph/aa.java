@@ -9,8 +9,6 @@ public class aa {
 
     }
 
-    // let's solve this bad boy for sure
-    // still some error, figure out why those are happening
     public List<String> findAllRecipes(String[] recipes, List<List<String>> ingredients, String[] supplies) {
         Map<String, Integer> map = new HashMap<>();
         Map<Integer, String> mapRev = new HashMap<>();
