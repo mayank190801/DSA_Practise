@@ -31,11 +31,11 @@ public class ac {
 
         // now we have created the graph, pretty cool for sure
         int[][] dist = new int[n][2];
-        for(int i = 0; i< n; i++){
-            for(int j = 0; j < 2; j++){
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < 2; j++) {
                 dist[i][j] = Integer.MAX_VALUE;
             }
-        }        
+        }
         dist[0][0] = 0;
         dist[0][1] = 0;
 
@@ -43,6 +43,8 @@ public class ac {
         ArrayDeque<Pair> que = new ArrayDeque<>();
         que.add(new Pair(0, 1));
         que.add(new Pair(0, 2));
+        vis[0][0] = 1;
+        vis[0][1] = 1;
 
         while (!que.isEmpty()) {
             Pair curr = que.poll();
@@ -69,11 +71,11 @@ public class ac {
         }
 
         int[] ans = new int[n];
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             ans[i] = Math.min(dist[i][0], dist[i][1]);
-            ans[i] = ans[i] === Integer.MAX_VALUE ? -1 : ans[i];
+            ans[i] = ans[i] == Integer.MAX_VALUE ? -1 : ans[i];
         }
-        return null;
+        return ans;
     }
 
     public static class Pair {

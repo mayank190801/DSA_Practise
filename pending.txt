@@ -1,1 +1,2 @@
 //simply solve ab.java in one dfs (figure that out in free time)
+//solve ac.java with 0 and 1 colour logic, rather than 1 and 2 + could be solved using a triplet rather than pair (think about it)
