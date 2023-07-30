@@ -71,12 +71,12 @@ public class ab {
         // now write our logic to update amont
         if (found[0] != -1) {
             int pos = found[0];
-            if (counter <= pos / 2) {
-                amount[curr] = 0;
-            }
-            if (pos % 2 == 1 && (pos / 2 + 1) == counter) {
-                amount[curr] = amount[curr] / 2;
-            }
+            amount[curr] = (counter <= pos / 2) ? 0
+                    : (pos % 2 == 1 && counter == pos / 2 + 1) ? amount[curr] / 2 : amount[curr];
         }
     }
 }
+
+// could be done with one dfs - if you think about it, extremely creative
+// solution
+// think of how you can do it with one DFS only
