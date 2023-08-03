@@ -72,8 +72,8 @@ public class ae {
             soln.add(new Pair(key, map.get(key)));
         }
 
-        Collections.sort(soln, (a, b) -> a.b - b.b);
         Collections.sort(soln, (a, b) -> a.a.compareTo(b.a));
+        Collections.sort(soln, (a, b) -> a.b - b.b);
 
         List<String> ans = new ArrayList<>();
         for (Pair p : soln) {
