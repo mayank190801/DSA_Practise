@@ -22,6 +22,7 @@ public class af {
 
             int newDist = Math.max(dis1[i], dis2[i]);
             if (newDist < dist) {
+                dist = newDist;
                 ans = i;
             }
         }
