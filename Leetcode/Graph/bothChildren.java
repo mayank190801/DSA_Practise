@@ -17,7 +17,7 @@ import java.math.*;
 // didn't read the question properly
 // Long int issues could arise as well
 
-public class prefixperm {
+public class bothChildren {
 
     static int mod = (int) (Math.pow(10, 9) + 7);
     static final int dx[] = { -1, 0, 1, 0 }, dy[] = { 0, -1, 0, 1 };
@@ -31,42 +31,32 @@ public class prefixperm {
         MyScanner sc = new MyScanner(); // pretty important for sure -
         out = new PrintWriter(new BufferedOutputStream(System.out)); // dope shit output for sure
 
-        // code here
         int test = sc.nextInt();
         while (test-- > 0) {
             int n = sc.nextInt();
-            long[] arr = new long[n - 1];
-            for (int i = 0; i < n - 1; i++) {
-                arr[i] = sc.nextLong();
-            }
-            int[] vis = new int[n];
-            boolean flag = false;
-            long rem = -1;
-            for (int i = 0; i < n - 1; i++) {
-                long num = arr[i] - (i == 0 ? 0 : arr[i - 1]);
-                if ((num > n || (vis[Math.toIntExact(num - 1)] == 1))) {
-                    if (rem != -1) {
-                        flag = true;
-                        break;
-                    } else {
-                        rem = num;
-                    }
-                } else {
-                    vis[Math.toIntExact(num - 1)] = 1;
-                }
-            }
-            ArrayList<Integer> list = new ArrayList<>();
+            int[] arr = new int[n];
             for (int i = 0; i < n; i++) {
-                if (vis[i] != 1) {
-                    list.add(i + 1);
+                arr[i] = sc.nextInt();
+            }
+
+            Map<Integer, Integer> map = new HashMap();
+            for (int i = 0; i < n; i++) {
+                int val = arr[i];
+                map.putIfAbsent(val, 0);
+                map.put(val, map.get(val) + 1);
+            }
+
+            int[] vis = new int[n + 1];
+            int max = 0;
+            for (int key : map.keySet()) {
+                int inc = map.get(key);
+                for (int j = key; j <= n; j += key) {
+                    vis[j] += inc;
+                    max = max(max, vis[j]);
                 }
             }
-            if (list.size() == 2) {
-                if (rem != list.get(0) + list.get(1)) {
-                    flag = true;
-                }
-            }
-            out.println(flag ? "NO" : "YES");
+
+            out.println(max);
         }
 
         out.close();
