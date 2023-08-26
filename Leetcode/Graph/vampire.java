@@ -31,6 +31,10 @@ public class vampire {
         MyScanner sc = new MyScanner(); // pretty important for sure -
         out = new PrintWriter(new BufferedOutputStream(System.out)); // dope shit output for sure
 
+        // exactly yehi solution soche the hum bhi bhaiya, zyada mushkil na lga tha ye
+        // toh
+        // thoda bas ye confirmation chahiye tha ki apne sahi soch rhe hai ya ni
+        // bas aur kuch ni chahiye tha
         int test = sc.nextInt();
         while (test-- > 0) {
             int n = sc.nextInt();
