@@ -108,6 +108,7 @@ public class flipper {
 
         }
 
+        // this one got accepted on first try
         out.close();
     }
 
