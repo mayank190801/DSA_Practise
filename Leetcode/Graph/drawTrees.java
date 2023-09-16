@@ -47,40 +47,51 @@ public class drawTrees {
                 int v = arr[i][1];
                 map.putIfAbsent(u, new Stack<>());
                 map.putIfAbsent(v, new Stack<>());
+                map.get(v).push(i);
                 map.get(u).push(i);
-
             }
 
             // that is done right
-            Set<Integer> set = new HashSet<>();
             int cnt = 1;
             Stack<Pair> st1 = new Stack<>();
             Stack<Pair> st2 = new Stack<>();
             st1.add(new Pair(1, -1));
+            int[] vis = new int[n];
+            int[] nvis = new int[n + 1];
+            nvis[1] = 1;
+            int cnter = 0;
 
             while (!st1.isEmpty() || !st2.isEmpty()) {
-
                 if (st1.isEmpty()) {
                     cnt++;
                     var temp = st1;
                     st1 = st2;
                     st2 = temp;
+                    cnter = 0;
                 }
-
                 Pair p = st1.pop();
                 int val = p.a;
                 int till = p.b;
                 while (!map.get(val).isEmpty() && map.get(val).peek() > till) {
                     int get = map.get(val).pop();
+                    if (vis[get] != 1)
+                        cnter++;
+                    vis[get] = 1;
                     int num = arr[get][1];
-                    st1.push(new Pair(num, get));
-                }
+                    int num2 = arr[get][0];
+                    int check = val == num ? num2 : num;
 
+                    if (nvis[check] != 1) {
+                        st1.push(new Pair(check, get));
+                        nvis[check] = 1;
+                    }
+                }
                 if (!map.get(val).isEmpty()) {
                     st2.push(new Pair(val, -1));
                 }
-
             }
+            if (cnter == 0)
+                cnt--;
 
             out.println(cnt);
 
