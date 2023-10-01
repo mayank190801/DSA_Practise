@@ -11,16 +11,13 @@ import java.math.*;
 //max space ever that could be alloted in a program to pass in cf 
 //int[][] prefixSum = new int[201][200_005];   -> not a single array more!!! 
 //never allocate memory again again to such bigg array, it will give memory exceeded for sure
-//ory exceeded for sure
-//
-//ain again to such bigg array, it will give memory exceeded for sure
-//solution and keep improving it!!! (sometimes)
+//believe in your fucking solution and keep improving it!!! (sometimes)
 
 ///common mistakes
-// didn't read the question umm what should we add here, what do you think? aso here we will be editing our text properly
+// didn't read the question properly
 // Long int issues could arise as well
 
-public class powerPoints {
+public class xorPrefix {
 
     static int mod = (int) (Math.pow(10, 9) + 7);
     static final int dx[] = { -1, 0, 1, 0 }, dy[] = { 0, -1, 0, 1 };
@@ -37,43 +34,41 @@ public class powerPoints {
         // code here
         int test = sc.nextInt();
         while (test-- > 0) {
-
             int n = sc.nextInt();
-            long[] arr = new long[n];
-            long[] original = new long[n];
+            int[] arr = new int[n];
             for (int i = 0; i < n; i++) {
-                arr[i] = sc.nextLong();
-                original[i] = arr[i];
+                arr[i] = sc.nextInt();
             }
-            // this sorting function sucks for sure
-            Map<Long, Long> map = new HashMap<>();
+            char[] inp = sc.nextLine().toCharArray();
 
-            long ans = n;
-            long num = arr[0];
-            for (int i = 1; i < n; i++) {
-                long prev = arr[i - 1];
-                long curr = arr[i];
-
-                long diff = curr - prev - 1;
-
-                // pretty much zero
-                ans += diff * i;
-                ans -= diff * (n - i);
-
-                // for current number
-                ans -= (n - i);
-                ans += n;
-
-                // for prev number
-                ans -= n;
-                ans += i;
-                map.put(arr[i], ans);
+            int x1 = 0;
+            int x2 = 0;
+            for (int i = 0; i < inp.length; i++) {
+                x1 ^= inp[i] == '1' ? arr[i] : 0;
+                x2 ^= inp[i] == '0' ? arr[i] : 0;
             }
 
+            int[] pre = new int[n + 1];
             for (int i = 0; i < n; i++) {
-                out.print(map.get(original[i]) + " ");
+                pre[i + 1] = pre[i] ^ arr[i];
+            }
+            int q = sc.nextInt();
+            for (int i = 0; i < q; i++) {
+                int tp = sc.nextInt();
+                if (tp == 1) {
+                    int l = sc.nextInt();
+                    int r = sc.nextInt();
+
+                    // now from l to r you have to basically do something about it
+                    x1 ^= pre[l - 1] ^ pre[r];
+                    x2 ^= pre[l - 1] ^ pre[r];
+                } else {
+                    int num = sc.nextInt();
+                    out.print((num == 1 ? x1 : x2) + " ");
+                }
             }
             out.println();
+
         }
 
         out.close();
@@ -328,16 +323,10 @@ public class powerPoints {
         // then form the parent node using them
         public void buildTree(int s, int e, int index) {
             if (s == e) {
-                tree[index] = arr[s] + 12312;
+                tree[index] = arr[s];
                 return;
             }
 
-            for(int i = 0; i < n; i++){
-                // this should work - right or not
-                athis should work
-            }
-            
-            
             // recursive case
             int mid = (s + e) / 2;
             buildTree(s, mid, 2 * index);
