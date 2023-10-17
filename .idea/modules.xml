@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Pepcoding/10. Graphs/10. Graphs.iml" filepath="$PROJECT_DIR$/Pepcoding/10. Graphs/10. Graphs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pepcoding/2. Linked List/2. Linked List.iml" filepath="$PROJECT_DIR$/Pepcoding/2. Linked List/2. Linked List.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pepcoding/3. StackQueue/3. StackQueue.iml" filepath="$PROJECT_DIR$/Pepcoding/3. StackQueue/3. StackQueue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pepcoding/4. Trees/4. Trees.iml" filepath="$PROJECT_DIR$/Pepcoding/4. Trees/4. Trees.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pepcoding/5. HashMap/5. HashMap.iml" filepath="$PROJECT_DIR$/Pepcoding/5. HashMap/5. HashMap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pepcoding/6. Heap/6. Heap.iml" filepath="$PROJECT_DIR$/Pepcoding/6. Heap/6. Heap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pepcoding/7. Sorting and Searching/7. Sorting and Searching.iml" filepath="$PROJECT_DIR$/Pepcoding/7. Sorting and Searching/7. Sorting and Searching.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pepcoding/8. Arrays/8. Arrays.iml" filepath="$PROJECT_DIR$/Pepcoding/8. Arrays/8. Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pepcoding/9. Dynamic Programming/9. Dynamic Programming.iml" filepath="$PROJECT_DIR$/Pepcoding/9. Dynamic Programming/9. Dynamic Programming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Codeforces Competitions/Codeforces Competitions.iml" filepath="$PROJECT_DIR$/Codeforces Competitions/Codeforces Competitions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pepcoding/Extra/Extra.iml" filepath="$PROJECT_DIR$/Pepcoding/Extra/Extra.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pepcoding/Pepcoding.iml" filepath="$PROJECT_DIR$/Pepcoding/Pepcoding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practise.iml" filepath="$PROJECT_DIR$/Practise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pepcoding/Extra/Test/Test.iml" filepath="$PROJECT_DIR$/Pepcoding/Extra/Test/Test.iml" />
+    </modules>
+  </component>
+</project>
