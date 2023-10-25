@@ -2,6 +2,9 @@ import java.util.Arrays;
 
 public class leetcode3 {
     public static void main(String[] args) {
+        //now let's work on improving this particular solution, as much as we can
+        //in time complexity and space and the style of code written
+        //daily work on that ability of yours! to improve the code quality brother
 
     }
 
