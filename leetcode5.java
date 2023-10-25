@@ -1,54 +1,33 @@
 
 public class leetcode5 {
     public static void main(String[] args) {
+       //this could be optimised like ton
+       //why do you even need pair brother? are you fucking dumb
 
     }
 
     public static int[] findIndices(int[] nums, int indexDifference, int valueDifference) {
-        Pair max = new Pair(-1, -1);
-        Pair min = new Pair(Integer.MAX_VALUE, -1);
-
+        int max = -1;
+        int min = -1;
         //let's solve it asap brother,
-        int[] ans = new int[2];
-        ans[0] = -1;
-        ans[1] = -1;
         int len = nums.length;
         for(int i = 0; i < len - indexDifference; i++){
             int curr = nums[i];
-            if(curr > max.a){
-               max.a = curr;
-               max.b = i;
+            if(max == -1 || curr > nums[max]){
+                max = i;
             }
-            if(curr < min.a){
-                min.a = curr;
-                min.b = i;
+            if(min == -1 ||curr < nums[min]){
+                min = i;
             }
-
-            //so now we have some shit as updated,
-            //get ahaed of that index
             int value = nums[i + indexDifference];
-            if(Math.abs((value - max.a)) >= valueDifference){
-               ans[0] = max.b;
-               ans[1] = i + indexDifference;
+            if(Math.abs((value - nums[max])) >= valueDifference){
+                return new int[]{max, i + indexDifference};
             }
-            if(Math.abs((value - min.a))>= valueDifference){
-               ans[0] = min.b;
-               ans[1] = i + indexDifference;
+            if(Math.abs((value - nums[min]))>= valueDifference){
+                return new int[]{min, i + indexDifference};
             }
-
         }
-
-
-        return ans;
+        return new int[]{-1, -1};
     }
 
-    static class Pair{
-        int a;
-        int b;
-
-        Pair(int a, int b){
-            this.a =a;
-            this.b = b;
-        }
-    }
 }
