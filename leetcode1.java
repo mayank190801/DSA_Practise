@@ -1,4 +1,4 @@
-class Solution {
+class leetcode1 {
     public int minimumSum(int[] nums) {
         int len = nums.length;
         int ans = Integer.MAX_VALUE;
