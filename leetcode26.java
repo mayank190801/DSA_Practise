@@ -24,4 +24,7 @@ public class leetcode26 {
     }
 
 
+    //one more better approach is there to solve this question for once and for all -
+    //divide and conquery, how can we do that??? - I have heard this approach a lot
+    //think on your own brother, and try to improve it on your own 
 }
