@@ -5,6 +5,8 @@
 -> You can find the prime numbers upto the square root of the number 
 -> chromatic member of the graph can be calculated, or that question simply meant using more brain power
 
+-> You can learn/revise about catalan number, and use it to solve questions
+
 
 
 
