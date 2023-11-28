@@ -6,7 +6,7 @@
 -> chromatic member of the graph can be calculated, or that question simply meant using more brain power
 
 -> You can learn/revise about catalan number, and use it to solve questions
-
+-> Why not solve triangle types question in dp from bottom to top?? - that does makes the question a bit easier to digest I feel
 
 
 
