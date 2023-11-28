@@ -19,7 +19,6 @@ public class leetcode33 {
           this.right = right;
       }
   }
-    //this should help in solving the generate trees questions
     public static List<TreeNode> generateTrees(int n) {
         return helper(1, n);
     }
